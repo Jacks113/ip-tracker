@@ -1,38 +1,61 @@
+*{
+  padding: 0;
+  margin: 0;
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-size: 18px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+header{
+    background-image: url("../public/images/pattern-bg.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 40vh;
+}
+
+input{
+  background-color: whitesmoke;
+}
+
+.address h2{
+  color: whitesmoke;
+}
+
+@media only screen and (max-width: 500px){
+
+  body{
+    font-size: 9px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  header{
+    position: relative;
+    top: 0;
+    height: 40vh;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+    
   }
-  to {
-    transform: rotate(360deg);
+
+  .address{
+    position: relative;
+    top: 5vh;
+
+  }
+
+  .address input{
+    padding: 1em;
+    border-radius: 1em;
+    border: none;
+  }
+
+  .address button{
+    background-color: black;
+    border: none;
+    border-radius: 0 1em 1em 0;
+    padding: 1em;
+    margin-left: -2em;
   }
 }
