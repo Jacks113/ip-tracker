@@ -21,7 +21,7 @@ body{
 header{
     background-image: url("../public/images/pattern-bg.png");
     background-repeat: no-repeat;
-    background-size: stretch;
+    background-size: cover;
     height: 30vh;
     width: 100vw;
     display: flex;
