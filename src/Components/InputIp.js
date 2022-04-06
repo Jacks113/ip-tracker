@@ -18,7 +18,7 @@ function InputIp (props){
     }
     return <form className="address" onSubmit={e=> handleSend(e)}>
                 <h2>IP Address Tracker</h2>
-                <input value={ipAddress} onChange={e=>handleInput(e)} placeholder="1.1.1.1" />
+                <input value={ipAddress} onChange={e=>handleInput(e)} />
                 <button type="submit">
                     <img alt="button-arrow-icon" src="/images/icon-arrow.svg" />
                 </button>
