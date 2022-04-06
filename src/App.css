@@ -83,6 +83,7 @@ input{
   width: 100vw;
 }
 
+
 @media only screen and (max-width: 500px){
 
   .App{
@@ -157,5 +158,16 @@ input{
   }
 }
 
-#map { height: 180px; }
+@media only screen and (max-height: 400px){
+  .info-container{
+    height: 200px;
+    font-size: 10px;
+  }
+
+  .leaflet-container{
+    height: 500px;
+  }
+
+
+}
 
