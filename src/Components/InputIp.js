@@ -16,7 +16,7 @@ function InputIp (props){
             setIpAddress("");
         }
     }
-    return <form className="address" onSubmit={handleSend(e)}>
+    return <form className="address" onSubmit={e=> handleSend(e)}>
                 <h2>IP Address Tracker</h2>
                 <input value={ipAddress} onChange={e=>handleInput(e)} placeholder="1.1.1.1" />
                 <button type="submit">

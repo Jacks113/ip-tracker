@@ -7,7 +7,7 @@ export default function Info(props){
                 {ipData !== "" ? <p>{ipData.ip}</p> : <p></p>}
 
                 <h3>Location</h3>
-                {ipData !== "" ? <p>{ipData.location.region}, {ipData.location.country}</p> : <p></p>}
+                {(ipData !== "" && ipData.location.region !== undefined) ? <p>{ipData.location.region}, {ipData.location.country}</p> : <p></p>}
 
                 <h3>Time zone</h3>
                 {ipData !== "" ? <p>{ipData.location.timezone}</p> : <p></p>}

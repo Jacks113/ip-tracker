@@ -4,18 +4,34 @@
 }
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
 body{
   font-size: 18px;
   font-family: "Rubik", sans-serif;
+  
 }
+
 
 header{
     background-image: url("../public/images/pattern-bg.png");
     background-repeat: no-repeat;
-    background-size: auto;
-    height: 40vh;
+    background-size: stretch;
+    height: 30vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+
+.address{
+  margin-top: 2%;
+  width: 100%;
 }
 
 input{
@@ -40,19 +56,54 @@ input{
   margin-left: -2em;
 }
 
+
+.info-container{
+  z-index: 10;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: white;
+
+  position: absolute;
+  top: 150px;
+
+  height: 400px;
+  width: 30vw;
+  margin: auto;
+  border-radius:1em ;
+  text-transform: uppercase;
+}
+
+.leaflet-container{
+
+  height: 500px;
+  z-index: 1;
+  width: 100vw;
+}
+
 @media only screen and (max-width: 500px){
+
+  .App{
+    /* height: 1000px; */
+    background-color: lightblue;
+
+  }
 
   body{
     font-size: 9px;
-    background-color: lightblue;
+    width: 100vw;
   }
 
   header{
     position: relative;
     top: 0;
-    height: 40vh;    
+    height: 250px;    
+    width: 100vw;
   }
 
+  
   .address{
     position: relative;
     top: 5vh;
@@ -75,17 +126,23 @@ input{
   }
 
   .info-container{
+    z-index: 10;
     font-size: 1.5em;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
     background-color: white;
-    height: 350px;
+
+    margin: auto;
+
+    position: absolute;
+    top: 150px;
+    left: 15%;
+
+    height: 300px;
     width: 70vw;
     margin: auto;
-    top: -20vh;
-    position: relative;
     border-radius:1em ;
     text-transform: uppercase;
   }
@@ -99,3 +156,6 @@ input{
     font-weight: 700;
   }
 }
+
+#map { height: 180px; }
+
