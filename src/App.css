@@ -8,6 +8,7 @@
 
 body{
   font-size: 18px;
+  font-family: "Rubik", sans-serif;
 }
 
 header{
@@ -25,10 +26,25 @@ input{
   color: whitesmoke;
 }
 
+.address input{
+  padding: 1em;
+  border-radius: 1em;
+  border: none;
+}
+
+.address button{
+  background-color: black;
+  border: none;
+  border-radius: 0 1em 1em 0;
+  padding: 1em;
+  margin-left: -2em;
+}
+
 @media only screen and (max-width: 500px){
 
   body{
     font-size: 9px;
+    background-color: lightblue;
   }
 
   header{
@@ -47,6 +63,7 @@ input{
     padding: 1em;
     border-radius: 1em;
     border: none;
+    max-width: 50%;
   }
 
   .address button{
@@ -55,5 +72,30 @@ input{
     border-radius: 0 1em 1em 0;
     padding: 1em;
     margin-left: -2em;
+  }
+
+  .info-container{
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: white;
+    height: 55vh;
+    width: 70vw;
+    margin: auto;
+    top: -20vh;
+    position: relative;
+    border-radius:1em ;
+    text-transform: uppercase;
+  }
+
+  .info-container h3{
+    color: hsl(0, 0%, 59%)
+  }
+
+  .info-container p{
+    color: black;
+    font-weight: 700;
   }
 }
