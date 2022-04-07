@@ -198,10 +198,10 @@ input{
 }
 
 @media only screen and (max-height: 500px){
-  .info-container{
+  /* .info-container{
     height: 200px;
     font-size: 10px;
-  }
+  } */
 
   .leaflet-container{
     height: 500px;
