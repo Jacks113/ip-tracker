@@ -31,13 +31,14 @@ function App() {
 
       <Info ipData={ip} />
 
-      <Map />
-      
-      
-
+      <Map id="map"/>
       
     </div>
+    
+
   )
+
+  
 
 }
 
