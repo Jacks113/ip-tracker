@@ -12,7 +12,7 @@ function InputIp (props){
     const handleSend = e => {
         e.preventDefault();
         if (ipAddress !== "" && ipAddress !== null && ipAddress.length >= 10){
-            props.newIp(ipAddress);
+            props.newIp(ipAddress.toString());
             setIpAddress("");
         }
     }
