@@ -1,27 +1,37 @@
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
-import L from "leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMap, ZoomControl } from 'react-leaflet';
+import { useEffect } from 'react';
 
-function Map(){
+
+function Map(props){
+
     
-    const map = useMap();
-
+    const { location } = props;
+    const map = useMap;
+    
+    useEffect(()=>{
+        console.log("Location data changed, new data: ", location);
+    }, [location])
     
 
-    return <MapContainer center={[45, 15]} zoom={13}>
+    const changePosition = (newLocation) => {
+        map.setView(newLocation, 9);
+        map.panTo(newLocation, 7);
+    }
+
+    return <MapContainer center={[51, -0.11]} zoomControl={false} zoom={3}>
             <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={[45, 15]}>
+            <Marker position={location}>
             <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
+                You are here. 
             </Popup>
             </Marker>
+            <ZoomControl position='bottomright'/>
         </MapContainer>
         
-        
-        console.log(map.locate());
-        
+       changePosition(location);
 
     
 }

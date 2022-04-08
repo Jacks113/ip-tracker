@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { getIP, getGeoData } from './Services/getIP';
 import InputIp from './Components/InputIp';
@@ -11,11 +11,20 @@ function App() {
 
   const [ip, setIp] = useState("");
   const [ipError, setIpError] = useState("");
+  const [location , setLocation] = useState([51, -0.11]);
+
 
   const newIp = ipAddress =>{
     getIP(setIp, setIpError, ipAddress);
     // getGeoData();
   }
+
+  useEffect (() =>{
+    if (ip.latitude !== "" && ip.latitude !== undefined & ip.latitude !== null && ip.longitude !== "" && ip.longitude !== undefined & ip.longitude !== null){
+      setLocation([ip.latitude, ip.longitude]);
+    }
+}, [ip])
+
 
   if (ipError){
     alert("The ip address was invalid, please enter a new address.")
@@ -31,7 +40,7 @@ function App() {
 
       <Info ipData={ip} />
 
-      <Map id="map"/>
+      <Map location={location} id="map"/>
       
     </div>
     
